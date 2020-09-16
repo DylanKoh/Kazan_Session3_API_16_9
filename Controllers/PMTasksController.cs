@@ -88,7 +88,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleKilometer + " Kilometer",
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "Gray"
                              }).ToList();
             return Json(getCustom);
         }
@@ -108,7 +109,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleDate,
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "Red"
                              }).ToList();
             return Json(getCustom);
         }
@@ -128,7 +130,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleDate,
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "Gray"
                              }).ToList();
             return Json(getCustom);
         }
@@ -151,7 +154,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleDate,
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "Gray"
                              }).ToList();
             return Json(getCustom);
         }
@@ -171,7 +175,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleKilometer + " Kilometer",
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "DarkGray"
                              }).ToList();
             return Json(getCustom);
         }
@@ -191,7 +196,8 @@ namespace Kazan_Session3_API_16_9.Controllers
                                  Asset = z.AssetName + "** SN:" + z.AssetSN,
                                  TaskName = a.Name,
                                  TaskTypeAndValue = y.Name + " - at " + x.ScheduleDate,
-                                 TaskDone = x.TaskDone
+                                 TaskDone = x.TaskDone,
+                                 bgColour = "Green"
                              }).ToList();
             return Json(getCustom);
         }
