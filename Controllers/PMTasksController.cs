@@ -34,9 +34,30 @@ namespace Kazan_Session3_API_16_9.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PMTasks.Add(pMTask);
-                db.SaveChanges();
-                return Json("Created PM Task successfully!");
+                if (pMTask.PMScheduleTypeID == 1)
+                {
+                    var findCurrentTask = (from x in db.PMTasks
+                                           where x.AssetID == pMTask.AssetID && x.TaskID == pMTask.TaskID
+                                           where x.ScheduleKilometer > pMTask.ScheduleKilometer
+                                           select x).FirstOrDefault();
+                    if (findCurrentTask != null)
+                    {
+                        return Json("Unable to add same task within similar range of values!");
+                    }
+                    else
+                    {
+                        db.PMTasks.Add(pMTask);
+                        db.SaveChanges();
+                        return Json("Created PM Task successfully!");
+                    }
+                }
+                else
+                {
+                    db.PMTasks.Add(pMTask);
+                    db.SaveChanges();
+                    return Json("Created PM Task successfully!");
+                }
+
             }
             return Json("There was an error during creation of PM Task! PLease contact our administrator!");
         }
@@ -160,7 +181,7 @@ namespace Kazan_Session3_API_16_9.Controllers
         public ActionResult GetTimeDone()
         {
             var getCustom = (from x in db.PMTasks
-                             where x.TaskDone == true && x.ScheduleDate != null 
+                             where x.TaskDone == true && x.ScheduleDate != null
                              join y in db.PMScheduleTypes on x.PMScheduleTypeID equals y.ID
                              join z in db.Assets on x.AssetID equals z.ID
                              join a in db.Tasks on x.TaskID equals a.ID
@@ -211,7 +232,7 @@ namespace Kazan_Session3_API_16_9.Controllers
             {
                 return Json("Update not needed!");
             }
-            
+
         }
 
         protected override void Dispose(bool disposing)
