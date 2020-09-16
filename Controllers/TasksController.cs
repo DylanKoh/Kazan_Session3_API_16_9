@@ -14,13 +14,20 @@ namespace Kazan_Session3_API_16_9.Controllers
     {
         private Session3FinalEntities db = new Session3FinalEntities();
 
-        // GET: Tasks
-        public ActionResult Index()
+        public TasksController()
         {
-            return View(db.Tasks.ToList());
+            db.Configuration.LazyLoadingEnabled = false;
         }
 
-        // GET: Tasks/Details/5
+        // POST: Tasks
+        [HttpPost]
+        public ActionResult Index()
+        {
+            return Json(db.Tasks.ToList());
+        }
+
+        // POST: Tasks/Details/5
+        [HttpPost]
         public ActionResult Details(long? id)
         {
             if (id == null)
@@ -32,77 +39,36 @@ namespace Kazan_Session3_API_16_9.Controllers
             {
                 return HttpNotFound();
             }
-            return View(task);
-        }
-
-        // GET: Tasks/Create
-        public ActionResult Create()
-        {
-            return View();
+            return Json(task);
         }
 
         // POST: Tasks/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Name")] Task task)
         {
             if (ModelState.IsValid)
             {
                 db.Tasks.Add(task);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json("Task created successfully!");
             }
 
-            return View(task);
-        }
-
-        // GET: Tasks/Edit/5
-        public ActionResult Edit(long? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Task task = db.Tasks.Find(id);
-            if (task == null)
-            {
-                return HttpNotFound();
-            }
-            return View(task);
+            return Json("Unable to create task!");
         }
 
         // POST: Tasks/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Name")] Task task)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(task).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json("Edited Task successfully!");
             }
-            return View(task);
+            return Json("An error occured while editing task! Please try again!");
         }
 
-        // GET: Tasks/Delete/5
-        public ActionResult Delete(long? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Task task = db.Tasks.Find(id);
-            if (task == null)
-            {
-                return HttpNotFound();
-            }
-            return View(task);
-        }
 
         // POST: Tasks/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -112,7 +78,7 @@ namespace Kazan_Session3_API_16_9.Controllers
             Task task = db.Tasks.Find(id);
             db.Tasks.Remove(task);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return Json("Deleted Task successfully!");
         }
 
         protected override void Dispose(bool disposing)
