@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="32823ede0759450a923f0fe864435af6" Name="Diagram1">
+        <EntityTypeShape EntityType="Session3FinalModel.AssetOdometer" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session3FinalModel.Asset" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session3FinalModel.PMScheduleModel" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session3FinalModel.PMScheduleType" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session3FinalModel.PMTask" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session3FinalModel.Task" Width="1.5" PointX="3.75" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="Session3FinalModel.FK_AssetOdometers_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="Session3FinalModel.FK_PMTasks_Assets" ManuallyRouted="false" />
+        <AssociationConnector Association="Session3FinalModel.FK_PMScheduleModels_PMScheduleTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="Session3FinalModel.FK_PMTasks_PMScheduleTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="Session3FinalModel.FK_PMTasks_Tasks" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
