@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Users\Dylan Koh\Source\Repos\Kazan_Session3_API_16_9\Session3Model.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Users\Dylan Koh\Source\Repos\Kazan_Session3_API_16_9\Session3FinalModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -129,10 +129,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Asset.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AssetOdometer.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AssetOdometersController.cs" />
     <Compile Include="Controllers\AssetsController.cs" />
@@ -145,32 +145,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="PMScheduleModel.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PMScheduleType.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PMTask.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Session3Model.Context.cs">
+    <Compile Include="Session3FinalModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Session3Model.Context.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Session3Model.cs">
+    <Compile Include="Session3FinalModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Session3Model.Designer.cs">
+    <Compile Include="Session3FinalModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Session3Model.edmx</DependentUpon>
+      <DependentUpon>Session3FinalModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Task.cs">
-      <DependentUpon>Session3Model.tt</DependentUpon>
+      <DependentUpon>Session3FinalModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -195,15 +195,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Session3Model.Context.tt">
+    <Content Include="Session3FinalModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Session3Model.Context.cs</LastGenOutput>
-      <DependentUpon>Session3Model.edmx</DependentUpon>
+      <DependentUpon>Session3FinalModel.edmx</DependentUpon>
+      <LastGenOutput>Session3FinalModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Session3Model.tt">
+    <Content Include="Session3FinalModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Session3Model.edmx</DependentUpon>
-      <LastGenOutput>Session3Model.cs</LastGenOutput>
+      <DependentUpon>Session3FinalModel.edmx</DependentUpon>
+      <LastGenOutput>Session3FinalModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -219,12 +219,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <EntityDeploy Include="Session3Model.edmx">
+    <EntityDeploy Include="Session3FinalModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Session3Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>Session3FinalModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Session3Model.edmx.diagram">
-      <DependentUpon>Session3Model.edmx</DependentUpon>
+    <Content Include="Session3FinalModel.edmx.diagram">
+      <DependentUpon>Session3FinalModel.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

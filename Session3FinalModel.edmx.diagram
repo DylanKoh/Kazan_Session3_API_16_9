@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="32823ede0759450a923f0fe864435af6" Name="Diagram1">
+      <Diagram DiagramId="c93d22f1196245768cbae5fac4a15553" Name="Diagram1">
         <EntityTypeShape EntityType="Session3FinalModel.AssetOdometer" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Session3FinalModel.Asset" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Session3FinalModel.PMScheduleModel" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
